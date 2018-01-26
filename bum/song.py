@@ -22,15 +22,15 @@ def get_player():
 
 def get_song(player, port):
     """Get current song."""
-    if player in ["mpd", "mopidy"]:
-        from .players import musicpd
-        client = musicpd.init(port)
-        return musicpd.get_song(client)
-
-    elif player == "cmus":
+    if player == "cmus":
         from .players import cmus
         client = cmus.init(port)
         return cmus.get_song(client)
+
+    elif player in ["mpd", "mopidy"]:
+        from .players import musicpd
+        client = musicpd.init(port)
+        return musicpd.get_song(client)
 
     from .players import mpris
     client = mpris.init()
