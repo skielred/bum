@@ -16,7 +16,7 @@ except(IOError, ImportError, RuntimeError):
 
 
 VERSION = bum.__version__
-DOWNLOAD = "https://github.com/dylanaraps/bum/archive/%s.tar.gz" % VERSION
+DOWNLOAD = "https://github.com/skielred/bum/archive/%s.tar.gz" % VERSION
 
 
 setuptools.setup(
@@ -27,7 +27,7 @@ setuptools.setup(
     description="Download and display album art for mpd tracks.",
     long_description=LONG_DESC,
     license="MIT",
-    url="https://github.com/dylanaraps/bum",
+    url="https://github.com/skielred/bum",
     download_url=DOWNLOAD,
     classifiers=[
         "Environment :: X11 Applications",
