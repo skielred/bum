@@ -25,7 +25,7 @@ def get_args():
 
     arg.add_argument("--size", metavar="\"px\"",
                      help="what size to display the album art in.",
-                     default=250)
+                     default=1000)
 
     arg.add_argument("--cache_dir", metavar="\"/path/to/dir\"",
                      help="Where to store the downloaded cover art.",
