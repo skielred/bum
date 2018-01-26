@@ -5,6 +5,20 @@
 [![Build Status](https://travis-ci.org/dylanaraps/bum.svg?branch=master)](https://travis-ci.org/dylanaraps/bum)
 [![Donate](https://img.shields.io/badge/donate-patreon-yellow.svg)](https://www.patreon.com/dyla)
 
+## About this fork
+
+This fork is based on the `players` branch (`22d820c`) from the original `bum` package.
+
+It fixes the import of `players` module to use `bum` with more music players when installing with a Python packages manager.
+
+It prioritizes the detection of `cmus` over `mpd`. This is strictly due to my personal usage. Sometimes I have the `mpd` daemon running even when `cmus` is opened. In these cases, I'm obviously listening music from `cmus`, so I changed the detection order.
+
+It changes the default album art picture size from 250 to 1000 pixels. Also based on personal usage. I could not get a non-blurred picture with the 250 pixels resolution (maybe because I use `i3`?).
+
+This version is based on `bum-0.1.2` and is named `bum-0.1.2-skiel`.
+
+# Original README
+
 `bum` is a daemon that downloads album art for songs playing and displays them in a little window. `bum` doesn't loop on a timer, instead it waits for a `SIGUSR1` signal. When it receives `SIGUSR1` it wakes up and downloads album art for the current playing track. This makes `bum` lightweight and makes it idle at `~0%` CPU usage.
 
 `bum` uses [musicbrainz](https://musicbrainz.org/) to source and download cover art, if an album is missing it's cover art you can easily create an account and fill in the data yourself. `bum` outputs a `release-id` which you can use to find the exact entry on musicbrainz.
