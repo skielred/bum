@@ -17,6 +17,14 @@ It changes the default album art picture size from 250 to 1000 pixels. Also base
 
 This version is based on `bum-0.1.2` and is named `bum-0.1.2-skiel`.
 
+To install this fork using `PyPI`, run:
+
+```sh
+pip install --user git+"https://github.com/skielred/bum"
+```
+to install locally. Replace `pip` with `pip3` or `pip3.6` based on your configuration. This package requires Python 3.6+.
+
+
 # Original README
 
 `bum` is a daemon that downloads album art for songs playing and displays them in a little window. `bum` doesn't loop on a timer, instead it waits for a `SIGUSR1` signal. When it receives `SIGUSR1` it wakes up and downloads album art for the current playing track. This makes `bum` lightweight and makes it idle at `~0%` CPU usage.
