@@ -1,5 +1,5 @@
 """bum - setup.py"""
-import setuptools
+from setuptools import setup, find_packages
 
 try:
     import bum
@@ -19,7 +19,7 @@ VERSION = bum.__version__
 DOWNLOAD = "https://github.com/skielred/bum/archive/%s.tar.gz" % VERSION
 
 
-setuptools.setup(
+setup(
     name="bum",
     version=VERSION,
     author="Dylan Araps",
